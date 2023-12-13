@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import BotService, { BotDetails } from "../services/bot.service";
+import { useEffect, useState } from 'react';
+import BotService, { BotDetails } from '../services/bot.service';
 
 export default function useBot() {
     const [addingBot, setAddingBot] = useState(false);
@@ -37,6 +37,7 @@ export default function useBot() {
             pincode?: string;
         }[];
         attachments: string[];
+        group_respond: boolean;
     }) => {
         return new Promise<void>((resolve) => {
             setAddingBot(true);
